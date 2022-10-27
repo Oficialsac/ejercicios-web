@@ -1,0 +1,223 @@
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+
+.nombre{
+    position: relative;
+    display: grid;
+    margin: 70px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 200px 300px;
+    row-gap: 50px;
+    justify-items: end;
+    align-content: center;
+    grid-template-areas: 'nombre_profesion foto' 
+                         'descripcion descripcion';
+    
+    
+}
+
+.nombre_profesion{
+    grid-area: nombre_profesion;
+}
+.nombre_profesion p{
+    font-size: 18px;
+}
+
+.descripcion{
+    grid-area: descripcion;
+    width: 90%;
+    text-align: center;
+    padding-top: 7%;
+    margin: auto;
+    border-top: 2px solid #088FC9;
+}
+
+.descripcion h2{
+    font-size: 30px;
+    color: #088FC9; 
+    margin:auto;
+    font-weight: bold;
+}
+
+.descripcion p{
+    font-size: 24px;
+    margin-top: 2%;
+}
+.foto{
+    grid-area: foto;
+}
+/* .nombre{
+    display: flex;
+} */
+h1{
+    font-size: 70px;
+    color: #088FC9; 
+    margin: 0;
+    margin-left: 50px;
+    font-weight: bold;
+
+}
+
+img{
+    width: 200px;
+    margin-right: 100px;
+}
+
+.nombre_profesion{
+    width: 100%;
+}
+
+.nombre_profesion p{
+    margin: 0;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.arrow-bottom{
+    width: 30px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.listas{
+    display: flex;
+    margin: 70px;
+    padding: 80px;
+    justify-content: space-around;
+}
+
+.listas h3{
+    font-size: 24px;
+    color: #088FC9; 
+}
+
+.listas li{
+    font-size: 20px;
+    
+}
+
+.listas ul{
+    padding: 20px;
+    list-style: inside;
+}
+
+.footer-contacto{
+    display: flex;
+    margin: 70px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    color: #088FC9;
+    text-decoration: dotted;
+}
+
+
+@media (max-width: 1024px) {
+    h1{
+        font-size: 60px;
+        color: #088FC9; 
+        margin: 0;
+        margin-left: 50px;
+        font-weight: bold;
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nombre{
+        margin: 20px;
+        grid-template-rows: 200px 150px 150px;
+        grid-template-areas: 'foto foto' 
+                             'nombre_profesion nombre_profesion'
+                             'descripcion descripcion';
+    }
+
+    img{
+        position: absolute;
+        left: 37%;
+    }
+
+    .nombre_profesion{
+        text-align: center;
+        width: 89%;
+    }
+
+    .nombre_profesion p{
+        text-align: center;
+        width: 78%;
+    }
+    .arrow-bottom{
+        width: 30px;
+        margin: 13%;
+        margin-top: 20px;
+    }
+    .listas{
+        display: flex;
+        padding: 70px;
+        justify-content: space-around;
+    }
+    
+}
+
+@media (max-width: 425px){
+
+    img{
+        position: absolute;
+        left: 28%;
+        top: 10px;
+    }
+
+    .nombre{
+        margin: 0;
+        width: 100%;
+        grid-template-rows: 200px 150px 150px;
+        grid-template-areas: 'foto foto' 
+                             'nombre_profesion nombre_profesion'
+                             'descripcion descripcion';
+    }
+    .nombre_profesion{
+        width: 100%;
+    }
+
+    .nombre_profesion p{
+        text-align: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    h1{
+        font-size: 40px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .arrow-bottom{
+        width: 30px;
+        margin: 13%;
+        position: absolute;
+        top: 100%;
+        left: 32%;
+    }
+
+    .listas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0;
+        padding: 20%;
+    }
+
+    .footer-contacto{
+        flex-direction: column;
+    }
+
+}

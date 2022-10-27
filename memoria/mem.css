@@ -1,0 +1,80 @@
+.contenedor{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+.carta{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   height: 100px;
+   width: 100px;
+   font-size: 4rem;
+   background-color: #ecf1f4;
+   border-radius: 30px;
+   user-select: none;
+}
+.carta-rellenar{
+    cursor: pointer;
+    position: absolute;
+    background-color: #01446E;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: #01446E;
+    color: #ecf1f4;
+    width: 150px;
+    margin: 5%;
+    font-size: 18px;
+}
+
+@keyframes ocultar {
+    from {background-color: rgba(0, 0, 0, 0);}
+    to {background-color: #01446E;}
+}
+
+@keyframes voltear{
+    from {background-color: #01446E;}
+    to {background-color: rgba(0, 0, 0, 0);}
+}
+
+.carta-rellenar:hover{
+    transform: scale(1.1, 1.1);
+    transition: transform .3s;
+}
+
+@media (max-width: 768px){
+    button{
+        margin: 8%;
+    }
+}
+
+@media (max-width: 425px){
+    button{
+        margin: 18%;
+    }
+
+    .carta{
+        width: 80px;
+        height: 80px;
+    }
+
+    .carta-rellenar{
+        width: 80px;
+        height: 80px;
+    }
+}

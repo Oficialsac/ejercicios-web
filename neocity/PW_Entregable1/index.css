@@ -1,0 +1,98 @@
+body{
+    background-color: #221129;
+    color: white;
+    font-family: sans-serif;
+    max-width: 1440px;
+    
+}
+.head{
+    margin: 65px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid #81568D;
+    padding-bottom: 20px;
+}
+.presentacion{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentacion h1{
+    font-size: 62px;
+    font-weight: bold;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.descripcion{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ligth{
+    font-size: 16px;
+}
+
+.uno , .dos{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+@media (max-width:1024px){
+    .presentacion{
+        padding-left: 30px;
+    }
+
+    .descripcion{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+   .presentacion h1{
+        font-size: 40px;
+   }
+
+   .descripcion{
+    flex-direction: column;
+   }
+
+   .dos p{
+    font-size: 20px;
+   }
+}
+
+@media (max-width: 425px){
+    .head{
+        flex-direction: column;
+
+    }
+    .presentacion{
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px){
+    .head{
+        flex-direction: column;
+
+    }
+    .presentacion{
+        padding: 0;
+    }
+}
